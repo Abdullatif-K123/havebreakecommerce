@@ -18,73 +18,13 @@ This project is a React-based frontend for an e-commerce application for haveBre
 
 ---
 
-## Folder Structure
-
-The `src` folder is organized as follows:
-├───assets
-│ ├───lottieFiles
-│ └───svg
-├───components
-│ ├───Auth
-│ ├───common
-│ │ ├───Footer
-│ │ ├───General
-│ │ ├───GridList
-│ │ ├───Header
-│ │ │ ├───HeaderCounter
-│ │ │ └───HeaderLeftBar
-│ │ └───Heading
-│ ├───eCommerce
-│ │ ├───CartItem
-│ │ ├───CartItemList
-│ │ ├───CartSubtotalPrice
-│ │ ├───Category
-│ │ ├───Dashboard
-│ │ ├───Product
-│ │ └───ProductInfo
-│ ├───feedback
-│ │ ├───Loading
-│ │ ├───LottieHandler
-│ │ ├───PageSuspenseFallback
-│ │ └───skeletons
-│ │ ├───CartSkeleton
-│ │ ├───CategorySkeleton
-│ │ └───ProductSkeleton
-│ └───Form
-│ └───Input
-├───hooks
-├───layouts
-│ ├───MainLayout
-│ └───ProfileLayout
-├───pages
-├───routes
-├───services
-├───store
-│ ├───auth
-│ │ └───act
-│ ├───cart
-│ │ ├───act
-│ │ └───selectors
-│ ├───categories
-│ │ └───act
-│ ├───orders
-│ │ └───act
-│ ├───products
-│ │ └───act
-│ └───wishlist
-│ └───act
-├───styles
-├───types
-├───utils
-└───validations
-
 Install dependencies:
 
     npm install
 
 Running the Backend
 
-If you want to install the backend, you can install it from [here](https://github.com/Abdullatif-K123/havebreak-backend).
+If you want to install the backend, you can install it from [Backend Repo](https://github.com/Abdullatif-K123/havebreak-backend).
 
 Start the backend server on port 5005:
 
