@@ -9,7 +9,7 @@ import Like from "@assets/svg/like.svg?react";
 import { TProduct } from "@types";
 
 import styles from "./styles.module.css";
-const { product, maximumNotice, wishlistBtn } = styles;
+const { maximumNotice, wishlistBtn } = styles;
 
 const Product = memo(
   ({
