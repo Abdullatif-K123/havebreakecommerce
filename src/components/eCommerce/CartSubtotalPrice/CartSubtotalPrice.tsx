@@ -60,7 +60,7 @@ const CartSubtotalPrice = ({
         </Modal.Header>
         <Modal.Body>
           Are you sure you want to place order with Subtotal:{" "}
-          {subtotal.toFixed(2)} EGP
+          {subtotal.toFixed(2)} AED
           {!loading && error && (
             <p style={{ color: "#DC3545", marginTop: "10px" }}>{error}</p>
           )}
@@ -87,7 +87,7 @@ const CartSubtotalPrice = ({
 
       <div className={styles.container}>
         <span>Subtotal:</span>
-        <span>{subtotal.toFixed(2)} EGP</span>
+        <span>{subtotal.toFixed(2)} AED</span>
       </div>
       {userAccessToken && (
         <div className={styles.container}>

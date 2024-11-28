@@ -1,13 +1,15 @@
 import { useState } from "react";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const DashboardAdd = () => {
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState("");
   const [maxItem, setMaxItem] = useState("");
   const [img, setImg] = useState("");
-
+  const [loading, setLoading] = useState<boolean>(false);
   const handleAddProduct = async () => {
+    setLoading(true);
     const newProduct = {
       title,
       price: Number(price),
@@ -24,19 +26,24 @@ const DashboardAdd = () => {
       body: JSON.stringify(newProduct),
     });
 
-    alert("Product added successfully!");
+    toast.success("Product added successfully!");
     setTitle("");
     setPrice("");
     setMaxItem("");
     setCategory("");
     setImg("");
+    setLoading(false);
   };
 
   return (
-    <div className="container mt-5">
-      <h2 className="text-center mb-4">Admin Dashboard</h2>
+    <div className="container mt-5 mb-5">
+      <h2 className="text-center mb-4" style={{ fontWeight: "bold" }}>
+        Admin Dashboard
+      </h2>
       <div className="card shadow-lg p-4">
-        <h4 className="mb-3">Add New Product</h4>
+        <h4 className="mb-3" style={{ fontWeight: "bold" }}>
+          Add New Product
+        </h4>
         <form>
           <div className="mb-3">
             <label htmlFor="productTitle" className="form-label">
@@ -112,11 +119,13 @@ const DashboardAdd = () => {
             type="button"
             className="btn btn-primary w-100"
             onClick={handleAddProduct}
+            disabled={loading}
           >
             Add Product
           </button>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 };

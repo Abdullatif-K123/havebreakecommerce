@@ -1,30 +1,135 @@
-# React + TypeScript + Vite
+# E-Commerce Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a React-based frontend for an e-commerce application for haveBreak test assessgment, built with TypeScript and powered by Vite for fast development and builds. The folder structure is designed for scalability and maintainability, supporting features like authentication, shopping cart, and product management.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frontend**:
 
-## Expanding the ESLint configuration
+  - Component-based architecture with React.
+  - State management using Redux Toolkit and Redux Persist.
+  - Routing with React Router DOM.
+  - Form validation with React Hook Form and Zod.
+  - Modular and reusable components.
+  - Animations using Lottie React and skeleton loaders.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Backend**:
+  - Uses `json-server` and `json-server-auth` for a mock API with authentication.
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Folder Structure
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+The `src` folder is organized as follows:
+├───assets
+│ ├───lottieFiles
+│ └───svg
+├───components
+│ ├───Auth
+│ ├───common
+│ │ ├───Footer
+│ │ ├───General
+│ │ ├───GridList
+│ │ ├───Header
+│ │ │ ├───HeaderCounter
+│ │ │ └───HeaderLeftBar
+│ │ └───Heading
+│ ├───eCommerce
+│ │ ├───CartItem
+│ │ ├───CartItemList
+│ │ ├───CartSubtotalPrice
+│ │ ├───Category
+│ │ ├───Dashboard
+│ │ ├───Product
+│ │ └───ProductInfo
+│ ├───feedback
+│ │ ├───Loading
+│ │ ├───LottieHandler
+│ │ ├───PageSuspenseFallback
+│ │ └───skeletons
+│ │ ├───CartSkeleton
+│ │ ├───CategorySkeleton
+│ │ └───ProductSkeleton
+│ └───Form
+│ └───Input
+├───hooks
+├───layouts
+│ ├───MainLayout
+│ └───ProfileLayout
+├───pages
+├───routes
+├───services
+├───store
+│ ├───auth
+│ │ └───act
+│ ├───cart
+│ │ ├───act
+│ │ └───selectors
+│ ├───categories
+│ │ └───act
+│ ├───orders
+│ │ └───act
+│ ├───products
+│ │ └───act
+│ └───wishlist
+│ └───act
+├───styles
+├───types
+├───utils
+└───validations
+
+Install dependencies:
+
+    npm install
+
+Running the Backend
+
+If you want to install the backend, you can install it from [here](https://github.com/Abdullatif-K123/havebreak-backend).
+
+Start the backend server on port 5005:
+
+    npx json-server-auth --watch db.json --port 5005
+
+        The API will be available at http://localhost:5005.
+
+    Important: Ensure the backend server is running on port 5005, as the frontend is configured to use this port.
+
+Running the Frontend
+
+    Start the development server:
+
+npm run dev
+
+Open your browser and navigate to:
+
+npm run build
+
+The build output will be located in the dist folder.
+Key Scripts
+
+    npm run dev - Start the development server.
+    npm run build - Build the app for production.
+    npm run preview - Preview the production build.
+    npm run lint - Lint the codebase for errors.
+
+Dependencies
+Frontend
+
+    React: Component-based UI library.
+    Redux Toolkit: State management.
+    React Router DOM: Declarative routing.
+    React Hook Form: Form management.
+    Zod: Schema validation.
+    Bootstrap: UI styling framework.
+
+Backe
+nd
+
+    json-server: Quick mock REST API.
+    json-server-auth: Authentication layer for json-server.
+
+License
+
+This project is licensed under the MIT License.
+
+Let me know if you need further edits!
